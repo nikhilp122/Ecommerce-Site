@@ -1,7 +1,8 @@
+/* General Styles */
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 200vh;
+    min-height: 100vh; /* Set to 100vh for proper viewport height */
     overflow-x: hidden;
 }
 
@@ -98,4 +99,59 @@ footer {
     z-index: 1000; /* Ensure footer is above other content */
     font-size: 0.9em; /* Optionally reduce font size */
     line-height: 1.2; /* Adjust line height */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 0.5em 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .product {
+        width: 100%; /* Full width for small screens */
+        margin: 0; /* Remove margin */
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .product p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    footer {
+        padding: 1em 0; /* Adjust padding if needed */
+        font-size: 0.8em; /* Smaller font size for footer */
+    }
+}
+
+/* Tablets (portrait and landscape) */
+@media only screen and (max-width: 768px) {
+    .product {
+        width: calc(50% - 1em); /* Two products per row */
+    }
+
+    .product-list {
+        gap: 0.5em;
+    }
+}
+
+/* Larger Tablets and Small Desktops */
+@media only screen and (max-width: 992px) {
+    .product {
+        width: calc(50% - 1em); /* Two products per row */
+    }
+
+    .product-list {
+        gap: 1em;
+    }
 }
